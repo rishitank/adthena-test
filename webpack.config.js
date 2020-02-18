@@ -13,7 +13,7 @@ const PATHS = {
   public: resolvePath('public'),
   dist: resolvePath('dist'),
   components: resolvePath('src/components'),
-  services: resolvePath('src/services'),
+  services: resolvePath('src/services')
 };
 
 module.exports = {
@@ -23,12 +23,12 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@components': PATHS.components,
-      '@services': PATHS.services,
-    },
+      '@services': PATHS.services
+    }
   },
   output: {
     filename: 'main.js',
-    path: PATHS.dist,
+    path: PATHS.dist
   },
   module: {
     rules: [
@@ -36,7 +36,7 @@ module.exports = {
         test: /\.(jsx|js|es6)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: { presets: ['@babel/env'] },
+        options: { presets: ['@babel/env'] }
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -45,47 +45,49 @@ module.exports = {
             loader: ExtractCssChunks.loader,
             options: {
               hot: isDevelopment,
-            },
+            }
           },
           {
             loader: 'css-loader',
             options: {
               sourceMap: isDevelopment,
-            },
+            }
           },
           {
             loader: 'postcss-loader',
             options: {
               sourceMap: isDevelopment,
-            },
+            }
           },
           {
             loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment,
-              includePaths: [
-                resolvePath('./node_modules/compass-mixins/lib'),
-              ],
-            },
-          },
-        ],
+              sassOptions: {
+                includePaths: [
+                  resolvePath('./node_modules/compass-mixins/lib'),
+                ]
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(html)$/,
         use: [
           {
             loader: 'raw-loader',
-          },
+          }
         ],
         exclude: [/public/],
-      },
-    ],
+      }
+    ]
   },
   devtool: isDevelopment ? 'inline-source-map' : 'source-map',
   plugins: [
     new ExtractCssChunks({
       filename: '[name].css',
-      chunkFilename: '[id].css',
+      chunkFilename: '[id].css'
     }),
     new HtmlWebpackPlugin({
       hash: true,
@@ -95,13 +97,13 @@ module.exports = {
       env: {
         environment,
       },
-      chunksSortMode: 'none',
-    }),
+      chunksSortMode: 'none'
+    })
   ],
   devServer: {
     contentBase: PATHS.public,
     historyApiFallback: true,
     host: '127.0.0.1',
-    port: 8082,
-  },
+    port: 8082
+  }
 };
