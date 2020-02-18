@@ -1,4 +1,4 @@
-const {defaults} = require('jest-config')
+const { defaults } = require('jest-config');
 
 const config = {
   verbose: true,
@@ -16,7 +16,7 @@ const config = {
   },
   testPathIgnorePatterns: [
     '/node_modules/',
-  ],
-}
+  ]
+};
 
-module.exports = {...defaults, ...config}
+module.exports = { ...defaults, ...config };
