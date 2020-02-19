@@ -35,7 +35,7 @@ describe('TodoInterface', () => {
       expect(fetchMock.calls().length).toBe(1);
 
       // TODO: Figure out why this doesn't work
-      //expect(wrapper.find('ul').exists()).toBe(true);
+      // expect(wrapper.find('ul').exists()).toBe(true);
     });
   });
 });
