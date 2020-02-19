@@ -107,3 +107,81 @@ ol li {
 p {
     font-weight: 250px;
 }
+
+.user-interface {
+    margin-top: 15px;
+    text-align: left;
+
+    form {
+        display: inline-flex;
+    }
+
+    .message {
+        margin-top: 15px;
+
+        &.error {
+            color: #F00;
+        }
+    }
+
+    .user-details {
+        display: flex;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 0px 15px 15px;
+        margin-top: 15px;
+
+        .user {
+            margin-right: 30px;
+        }
+
+        &.light {
+            background: lightgrey;
+            color: black;
+        }
+
+        &.dark {
+            background: dimgrey;
+            color: white;
+        }
+    }
+}
+
+.dropdown-holder {
+    display: flex;
+    margin-left: 30px;
+
+    > h4 {
+        margin: auto;
+    }
+
+    .dropdown {
+        margin: auto 10px;
+        height: 35px;
+        width: 100px;
+    }
+}
+
+.todos ul {
+    list-style-type: none;
+    padding: 0;
+
+    .item {
+        padding: 15px;
+        border: 3px dotted;
+        margin-bottom: 5px;
+        border-radius: 10px;
+
+        &.completed {
+            border-color: royalblue;
+        }
+
+        &.pending {
+            border-color: lightcoral;
+        }
+
+        span {
+            float: right;
+        }
+    }
+}

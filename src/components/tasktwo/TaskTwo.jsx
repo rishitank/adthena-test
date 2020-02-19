@@ -1,4 +1,5 @@
 import React from 'react';
+import UserInterface from './UserInterface';
 
 const TaskTwo = () => (
   <div className="task">
@@ -6,8 +7,8 @@ const TaskTwo = () => (
     <div className="content">
       <h4>Complete the following task:</h4>
       <p>
-          The task is to create components to fetch public API data, combine it, apply
-          filtering and visualise that data.
+        The task is to create components to fetch public API data, combine it, apply
+        filtering and visualise that data.
       </p>
       <p>Include unit tests. Jest is already configured for you in the skeleton project.</p>
       Expected:
@@ -45,6 +46,8 @@ const TaskTwo = () => (
       </ol>
       <strong>Feel free to use this component for your implementation.</strong>
     </div>
+
+    <UserInterface />
   </div>
 );
 

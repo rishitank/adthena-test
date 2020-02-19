@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInterface Renders correctly 1`] = `
+<div
+  class="user-interface"
+>
+  <h2>
+    User Interface
+  </h2>
+  <form>
+    <input
+      placeholder="Enter username"
+      required=""
+      type="text"
+      value=""
+    />
+    <button
+      type="submit"
+    >
+      Search
+    </button>
+    <div
+      class="dropdown-holder"
+    >
+      <h4>
+        select theme:
+      </h4>
+      <select
+        class="dropdown"
+        disabled=""
+      >
+        <option
+          selected=""
+          value="light"
+        >
+          light mode
+        </option>
+        <option
+          value="dark"
+        >
+          dark mode
+        </option>
+      </select>
+    </div>
+  </form>
+</div>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoInterface Renders correctly 1`] = `
+<div
+  class="todos"
+>
+  <h3>
+    <u>
+      Todos
+    </u>
+  </h3>
+</div>
+`;
